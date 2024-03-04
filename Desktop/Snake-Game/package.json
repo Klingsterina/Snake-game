@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "build": "^0.1.4",
+    "concurrently": "^8.2.2",
+    "copy": "^0.3.2",
+    "cpy": "^11.0.0",
+    "eslint": "^8.57.0"
+  },
+  "name": "snake-game",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files styles.css index.html",
+    "lint": "eslint ./**/*.js",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:js": "cpy ./*.js ./build/",
+    "copy:css": "cpy ./*.css ./build/",
+    "build": "concurrently npm:copy:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "concurrently": "^8.2.2",
+    "cpy-cli": "^5.0.0",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  }
+}
